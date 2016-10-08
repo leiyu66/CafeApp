@@ -1,0 +1,5 @@
+/Users/pssc/CafeApp/src/CafeApp.Core.Tests/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.fs
+/Users/pssc/CafeApp/tests/CafeApp.Core.Tests.dll.mdb
+/Users/pssc/CafeApp/tests/CafeApp.Core.Tests.dll
+/Users/pssc/CafeApp/src/CafeApp.Core.Tests/obj/Debug/CafeApp.Core.Tests.dll
+/Users/pssc/CafeApp/src/CafeApp.Core.Tests/obj/Debug/CafeApp.Core.Tests.dll.mdb
