@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="/Users/pssc/CafeApp/tests/CafeApp.Core.Tests.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2016-09-05" time="19:52:37">
-  <environment nunit-version="2.6.4.14350" clr-version="4.0.30319.42000" os-version="Unix 15.6.0.0" platform="Unix" cwd="/Users/pssc/CafeApp" machine-name="MASC-MBP-1.fios-router.home" user="pssc" user-domain="MASC-MBP-1.fios-router.home" />
+<test-results name="/Users/pssc/CafeApp/tests/CafeApp.Core.Tests.dll" total="2" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2016-12-03" time="00:32:19">
+  <environment nunit-version="2.6.4.14350" clr-version="4.0.30319.42000" os-version="Unix 16.1.0.0" platform="Unix" cwd="/Users/pssc/CafeApp" machine-name="MASC-MBP-1.fios-router.home" user="pssc" user-domain="MASC-MBP-1.fios-router.home" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="/Users/pssc/CafeApp/tests/CafeApp.Core.Tests.dll" executed="True" result="Success" success="True" time="0.019" asserts="0">
+  <test-suite type="Assembly" name="/Users/pssc/CafeApp/tests/CafeApp.Core.Tests.dll" executed="True" result="Success" success="True" time="0.130" asserts="0">
     <results>
-      <test-suite type="Namespace" name="CafeApp" executed="True" result="Success" success="True" time="0.014" asserts="0">
+      <test-suite type="TestFixture" name="OpenTabTests" executed="True" result="Success" success="True" time="0.120" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Core" executed="True" result="Success" success="True" time="0.014" asserts="0">
-            <results>
-              <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="0.014" asserts="0">
-                <results>
-                  <test-suite type="TestFixture" name="UnitTests" executed="True" result="Success" success="True" time="0.014" asserts="0">
-                    <results>
-                      <test-case name="CafeApp.Core.Tests.UnitTests.Sample Test" executed="True" result="Success" success="True" time="0.010" asserts="1" />
-                    </results>
-                  </test-suite>
-                </results>
-              </test-suite>
-            </results>
-          </test-suite>
+          <test-case name="OpenTabTests.Can Open a new Tab" executed="True" result="Success" success="True" time="0.106" asserts="2" />
+          <test-case name="OpenTabTests.Cannot open an already Opened tab" executed="True" result="Success" success="True" time="0.003" asserts="1" />
         </results>
       </test-suite>
     </results>
