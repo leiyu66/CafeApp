@@ -3,3 +3,8 @@
 /Users/pssc/CafeApp/build/CafeApp.Core.dll
 /Users/pssc/CafeApp/src/CafeApp.Core/obj/Release/CafeApp.Core.dll
 /Users/pssc/CafeApp/src/CafeApp.Core/obj/Release/CafeApp.Core.dll.mdb
+/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Core/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.fs
+/mnt/c/Users/leiyu/CafeApp/build/CafeApp.Core.dll.mdb
+/mnt/c/Users/leiyu/CafeApp/build/CafeApp.Core.dll
+/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Core/obj/Release/CafeApp.Core.dll
+/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Core/obj/Release/CafeApp.Core.dll.mdb
