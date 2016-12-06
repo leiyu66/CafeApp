@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="/mnt/c/Users/leiyu/CafeApp/tests/CafeApp.Core.Tests.dll" total="12" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2016-12-06" time="09:54:35">
+<test-results name="/mnt/c/Users/leiyu/CafeApp/tests/CafeApp.Core.Tests.dll" total="16" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2016-12-06" time="11:00:49">
   <environment nunit-version="2.6.4.14350" clr-version="4.0.30319.42000" os-version="Unix 3.4.0.0" platform="Unix" cwd="/mnt/c/Users/leiyu/CafeApp" machine-name="MININT-LEIYU-X1" user="leiyu" user-domain="MININT-LEIYU-X1" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="/mnt/c/Users/leiyu/CafeApp/tests/CafeApp.Core.Tests.dll" executed="True" result="Success" success="True" time="0.143" asserts="0">
+  <test-suite type="Assembly" name="/mnt/c/Users/leiyu/CafeApp/tests/CafeApp.Core.Tests.dll" executed="True" result="Success" success="True" time="0.158" asserts="0">
     <results>
       <test-suite type="TestFixture" name="OpenTabTests" executed="True" result="Success" success="True" time="0.098" asserts="0">
         <results>
@@ -16,17 +16,25 @@
           <test-case name="PlaceOrderTests.Can not place empty order" executed="True" result="Success" success="True" time="0.002" asserts="1" />
           <test-case name="PlaceOrderTests.Can not place order multiple times" executed="True" result="Success" success="True" time="0.001" asserts="1" />
           <test-case name="PlaceOrderTests.Can not place order with a closed tab" executed="True" result="Success" success="True" time="0.001" asserts="1" />
-          <test-case name="PlaceOrderTests.Can place only drinks order" executed="True" result="Success" success="True" time="0.003" asserts="2" />
+          <test-case name="PlaceOrderTests.Can place only drinks order" executed="True" result="Success" success="True" time="0.002" asserts="2" />
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="ServeDrinkTests" executed="True" result="Success" success="True" time="0.026" asserts="0">
+      <test-suite type="TestFixture" name="PrepareFoodTests" executed="True" result="Success" success="True" time="0.015" asserts="0">
         <results>
-          <test-case name="ServeDrinkTests.Can not serve drink for already served order" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+          <test-case name="PrepareFoodTests.Can not prepare a food for served order" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+          <test-case name="PrepareFoodTests.Can not prepare a non-ordered food" executed="True" result="Success" success="True" time="0.004" asserts="1" />
+          <test-case name="PrepareFoodTests.Can not prepare with closed tab" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+          <test-case name="PrepareFoodTests.Can Prepare Food" executed="True" result="Success" success="True" time="0.002" asserts="2" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="ServeDrinkTests" executed="True" result="Success" success="True" time="0.017" asserts="0">
+        <results>
+          <test-case name="ServeDrinkTests.Can not serve drink for already served order" executed="True" result="Success" success="True" time="0.003" asserts="1" />
           <test-case name="ServeDrinkTests.Can not serve drinks for non placed order" executed="True" result="Success" success="True" time="0.001" asserts="1" />
-          <test-case name="ServeDrinkTests.Can not serve non ordered drink" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+          <test-case name="ServeDrinkTests.Can not serve non ordered drink" executed="True" result="Success" success="True" time="0.002" asserts="1" />
           <test-case name="ServeDrinkTests.Can not serve with closed tab" executed="True" result="Success" success="True" time="0.001" asserts="1" />
-          <test-case name="ServeDrinkTests.Can Serve Drink" executed="True" result="Success" success="True" time="0.003" asserts="2" />
-          <test-case name="ServeDrinkTests.Can serve drink for order containing only one drink" executed="True" result="Success" success="True" time="0.007" asserts="2" />
+          <test-case name="ServeDrinkTests.Can Serve Drink" executed="True" result="Success" success="True" time="0.001" asserts="2" />
+          <test-case name="ServeDrinkTests.Can serve drink for order containing only one drink" executed="True" result="Success" success="True" time="0.004" asserts="2" />
         </results>
       </test-suite>
     </results>

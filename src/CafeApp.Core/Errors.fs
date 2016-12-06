@@ -9,3 +9,6 @@ type Error =
   | OrderAlreadyServed
   | CanNotServeForNonPlacedOrder
   | CanNotServeWithClosedTab
+  | CanNotPrepareNonOrderedFood of Food
+  | CanNotPrepareForNonPlacedOrder
+  | CanNotPrepareWithClosedTab
