@@ -1,0 +1,6 @@
+C:\Users\leiyu\CafeApp\build\CafeApp.Core.dll
+C:\Users\leiyu\CafeApp\build\CafeApp.Core.pdb
+C:\Users\leiyu\CafeApp\build\CafeApp.Core.XML
+C:\Users\leiyu\CafeApp\src\CafeApp.Core\obj\Release\CafeApp.Core.fsprojResolveAssemblyReference.cache
+C:\Users\leiyu\CafeApp\src\CafeApp.Core\obj\Release\CafeApp.Core.dll
+C:\Users\leiyu\CafeApp\src\CafeApp.Core\obj\Release\CafeApp.Core.pdb

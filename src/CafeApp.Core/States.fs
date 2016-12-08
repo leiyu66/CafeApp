@@ -29,5 +29,16 @@ let apply state event =
       ServedDrinks = []
       ServedFoods = []
     } |> OrderInProgress
+  | OrderInProgress ipo, DrinkServed (drink,_) ->
+    {ipo with ServedDrinks =  drink :: ipo.ServedDrinks}
+    |> OrderInProgress
+  | OrderInProgress ipo, FoodPrepared (food,_) ->
+    {ipo with PreparedFoods = food :: ipo.PreparedFoods}
+    |> OrderInProgress
+  | OrderInProgress ipo, FoodServed (item, _) ->
+    {ipo with ServedFoods = item :: ipo.ServedFoods}
+    |> OrderInProgress
   | OrderInProgress ipo, OrderServed (order, _) -> ServedOrder order
+  | ServedOrder order, TabClosed payment ->
+    ClosedTab (Some payment.Tab.Id)
   | _ -> state
