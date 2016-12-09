@@ -71,6 +71,7 @@ NUGET
       System.Threading.Timer (>= 4.3) - framework: >= net451, >= netstandard12
       System.Xml.ReaderWriter (>= 4.3) - framework: >= netstandard10
       System.Xml.XDocument (>= 4.3) - framework: >= netstandard10
+    NEventStore (5.2)
     NUnit (2.6.4)
     NUnit.Runners (2.6.4)
     runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl (4.3) - framework: >= netstandard16
