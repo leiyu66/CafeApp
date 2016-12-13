@@ -15,6 +15,7 @@ let getTabIdFromState = function
 | OrderInProgress ipo -> Some ipo.PlacedOrder.Tab.Id
 | ServedOrder payment -> Some payment.Tab.Id
 | ClosedTab (Some tabId) -> Some tabId
+
 let saveEvent (storeEvents : IStoreEvents) state event  =
   match getTabIdFromState state with
   | Some tabId ->
@@ -38,5 +39,5 @@ let getState storeEvents tabId =
 
 type EventStore = {
   GetState : Guid -> Async<State>
-  SaveEvent : State -> Event -> Async<unit>
+  SaveEvents : State -> List<Event> -> Async<unit>
 }

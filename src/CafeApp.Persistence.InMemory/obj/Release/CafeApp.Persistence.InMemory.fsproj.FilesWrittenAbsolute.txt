@@ -1,0 +1,1 @@
+/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Persistence.InMemory/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.fs

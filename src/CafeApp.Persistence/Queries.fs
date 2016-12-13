@@ -6,6 +6,14 @@ open System
 
 type TableQueries = {
   GetTables : unit -> Async<Table list>
+  GetTableByTableNumber : int -> Async<Table option>
+  GetTableByTabId : Guid -> Async<Table option>
+}
+type FoodQueries = {
+  GetFoodsByMenuNumbers : int[] -> Async<Choice<Food list, int[]>>
+}
+type DrinkQueries = {
+  GetDrinksByMenuNumbers : int[] -> Async<Choice<Drink list, int[]>>
 }
 type ToDoQueries = {
   GetChefToDos : unit -> Async<ChefToDo list>
@@ -15,4 +23,6 @@ type ToDoQueries = {
 type Queries = {
   Table : TableQueries
   ToDo : ToDoQueries
+  Food : FoodQueries
+  Drink : DrinkQueries
 }

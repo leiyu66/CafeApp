@@ -8,3 +8,6 @@
 /mnt/c/Users/leiyu/CafeApp/tests/CafeApp.Core.dll
 /mnt/c/Users/leiyu/CafeApp/src/CafeApp.Core/obj/Debug/CafeApp.Core.dll
 /mnt/c/Users/leiyu/CafeApp/src/CafeApp.Core/obj/Debug/CafeApp.Core.dll.mdb
+/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Core/bin/Debug/CafeApp.Core.dll.mdb
+/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Core/bin/Debug/CafeApp.Core.dll
+/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Core/bin/Debug/Chessie.dll

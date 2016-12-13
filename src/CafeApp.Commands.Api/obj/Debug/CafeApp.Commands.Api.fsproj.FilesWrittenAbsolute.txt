@@ -1,0 +1,12 @@
+/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Commands.Api/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.fs
+/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Commands.Api/bin/Debug/Chessie.dll
+/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Commands.Api/bin/Debug/FSharp.Data.dll
+/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Commands.Api/bin/Debug/CafeApp.Core.dll
+/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Commands.Api/bin/Debug/CafeApp.Core.dll.mdb
+/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Commands.Api/bin/Debug/CafeApp.Persistence.dll
+/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Commands.Api/bin/Debug/CafeApp.Persistence.dll.mdb
+/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Commands.Api/bin/Debug/NEventStore.dll
+/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Commands.Api/bin/Debug/CafeApp.Commands.Api.dll.mdb
+/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Commands.Api/bin/Debug/CafeApp.Commands.Api.dll
+/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Commands.Api/obj/Debug/CafeApp.Commands.Api.dll
+/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Commands.Api/obj/Debug/CafeApp.Commands.Api.dll.mdb
