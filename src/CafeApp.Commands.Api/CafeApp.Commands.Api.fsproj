@@ -59,6 +59,7 @@
     <Compile Include="ServeDrink.fs" />
     <Compile Include="PrepareFood.fs" />
     <Compile Include="ServeFood.fs" />
+    <Compile Include="CloseTab.fs" />
     <Compile Include="CommandApi.fs" />
   </ItemGroup>
   <PropertyGroup>
