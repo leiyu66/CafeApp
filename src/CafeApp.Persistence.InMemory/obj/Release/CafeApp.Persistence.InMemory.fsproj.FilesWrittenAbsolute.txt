@@ -1,5 +1,0 @@
-/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Persistence.InMemory/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.fs
-/mnt/c/Users/leiyu/CafeApp/build/CafeApp.Persistence.InMemory.dll.mdb
-/mnt/c/Users/leiyu/CafeApp/build/CafeApp.Persistence.InMemory.dll
-/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Persistence.InMemory/obj/Release/CafeApp.Persistence.InMemory.dll
-/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Persistence.InMemory/obj/Release/CafeApp.Persistence.InMemory.dll.mdb

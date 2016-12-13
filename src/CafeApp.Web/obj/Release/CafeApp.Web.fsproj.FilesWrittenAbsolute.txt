@@ -1,6 +1,0 @@
-/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Web/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.fs
-/mnt/c/Users/leiyu/CafeApp/build/CafeApp.Web.exe.config
-/mnt/c/Users/leiyu/CafeApp/build/CafeApp.Web.exe.mdb
-/mnt/c/Users/leiyu/CafeApp/build/CafeApp.Web.exe
-/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Web/obj/Release/CafeApp.Web.exe
-/mnt/c/Users/leiyu/CafeApp/src/CafeApp.Web/obj/Release/CafeApp.Web.exe.mdb
