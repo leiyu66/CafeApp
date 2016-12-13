@@ -57,6 +57,7 @@
     <Compile Include="OpenTab.fs" />
     <Compile Include="PlaceOrder.fs" />
     <Compile Include="ServeDrink.fs" />
+    <Compile Include="PrepareFood.fs" />
     <Compile Include="CommandApi.fs" />
   </ItemGroup>
   <PropertyGroup>
