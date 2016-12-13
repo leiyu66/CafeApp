@@ -43,9 +43,18 @@ let getFoodsByMenuNumbers keys =
   getItems foods keys |> async.Return
 let getDrinksByMenuNumbers keys =
   getItems drinks keys |> async.Return
+let getItem<'a> (dict : Dictionary<int,'a>) key =
+  if dict.ContainsKey key then
+    dict.[key] |> Some
+  else
+    None
+let getDrinkByMenuNumber key =
+  getItem drinks key |> async.Return
+
 let foodQueries = {
   GetFoodsByMenuNumbers = getFoodsByMenuNumbers
 }
 let drinkQueries = {
   GetDrinksByMenuNumbers = getDrinksByMenuNumbers
+  GetDrinkByMenuNumber = getDrinkByMenuNumber
 }

@@ -3,18 +3,24 @@ open System.Text
 open CommandHandler
 open OpenTab
 open PlaceOrder
+open ServeDrink
 open Queries
 open Chessie.ErrorHandling
 
 // ValidationQueries -> EventStore -> string
 //     -> Async<Result<(State*Event),ErrorResponse>>
-let handleCommandRequest validationQueries eventStore
+let handleCommandRequest queries eventStore
   = function
   | OpenTabRequest tab ->
-      validationQueries.Table.GetTableByTableNumber
+      queries.Table.GetTableByTableNumber
       |> openTabCommander
       |> handleCommand eventStore tab
   | PlaceOrderRequest placeOrder ->
-    placeOrderCommander validationQueries
+    placeOrderCommander queries
     |> handleCommand eventStore placeOrder
+  | ServeDrinkRequest (tabId, drinkMenuNumber) ->
+    queries.Drink.GetDrinkByMenuNumber
+    |> serveDrinkCommander
+        queries.Table.GetTableByTabId
+    |> handleCommand eventStore (tabId, drinkMenuNumber)
   | _ -> err "Invalid command" |> fail |> async.Return
