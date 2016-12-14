@@ -4,6 +4,7 @@ nuget FAKE
 nuget Fsharp.Data
 nuget FsUnit
 nuget NEventStore
+nuget Newtonsoft.Json
 nuget NUnit 2.6.4
 nuget NUnit.Runners 2.6.4
 nuget Suave
