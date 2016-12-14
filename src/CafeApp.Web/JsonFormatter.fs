@@ -2,7 +2,7 @@ module JsonFormatter
 open Newtonsoft.Json.Linq
 open Domain
 open States
-open CommandHandlers
+open CommandHandler
 open Suave
 open Suave.Successful
 open Suave.Operators
