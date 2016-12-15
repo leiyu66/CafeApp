@@ -7,6 +7,7 @@ open Suave.RequestErrors
 open Suave.Operators
 open Suave.Filters
 open CommandApi
+open QueriesApi
 open InMemory
 open System.Text
 open Chessie.ErrorHandling
@@ -46,6 +47,7 @@ let main argv =
     let eventStore = inMemoryEventStore ()
     choose [
       commandApi eventStore
+      queriesApi inMemoryQueries eventStore
     ]
   let cfg = 
     {defaultConfig with

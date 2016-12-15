@@ -3,6 +3,7 @@ open Newtonsoft.Json.Linq
 open Domain
 open States
 open CommandHandler
+open ReadModel
 open Suave
 open Suave.Successful
 open Suave.Operators
@@ -96,3 +97,63 @@ let toStateJson state =
 let toErrorJson err =
   jobj [ "error" .= err.Message ]
   |> string |> JSON BAD_REQUEST
+
+let statusJObj = function
+| Open tabId ->
+  "status" .= jobj [
+                "open" .= tabId.ToString()
+              ]
+| InService tabId ->
+  "status" .= jobj [
+                "inService" .= tabId.ToString()
+              ]
+| Closed -> "status" .= "closed"
+
+let tableJObj table =
+  jobj [
+    "number" .= table.Number
+    "waiter" .= table.Waiter
+    "status" .= statusJObj table.Status ]
+
+let toReadModelsJson toJObj key models =
+  models
+  |> List.map toJObj |> jArray
+  |> (.=) key |> List.singleton |> jobj
+  |> string |> JSON OK
+
+let toTablesJSON = toReadModelsJson tableJObj "tables"
+
+let chefToDoJObj (todo : ChefToDo) =
+  jobj [
+    "tabId" .= todo.Tab.Id.ToString()
+    "tableNumber" .= todo.Tab.TableNumber
+    "foods" .= foodJArray todo.Foods
+  ]
+
+let toChefToDosJSON =
+  toReadModelsJson chefToDoJObj "chefToDos"
+
+let waiterToDoJObj todo =
+  jobj [
+    "tabId" .= todo.Tab.Id.ToString()
+    "tableNumber" .= todo.Tab.TableNumber
+    "foods" .= foodJArray todo.Foods
+    "drinks" .= drinkJArray todo.Drinks
+  ]
+
+let toWaiterToDosJSON =
+  toReadModelsJson waiterToDoJObj "waiterToDos"
+
+let cashierToDoJObj (payment : Payment) =
+  jobj [
+    "tabId" .= payment.Tab.Id.ToString()
+    "tableNumber" .= payment.Tab.TableNumber
+    "paymentAmount" .= payment.Amount
+  ]
+let toCashierToDosJSON =
+  toReadModelsJson cashierToDoJObj "cashierToDos"
+
+let toFoodsJSON =
+  toReadModelsJson foodJObj "foods"
+let toDrinksJSON =
+  toReadModelsJson drinkJObj "drinks"
