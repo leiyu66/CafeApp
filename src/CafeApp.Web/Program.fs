@@ -6,6 +6,9 @@ open Suave.Successful
 open Suave.RequestErrors
 open Suave.Operators
 open Suave.Filters
+open Suave.Sockets
+open Suave.Sockets.Control
+open Suave.WebSocket
 open CommandApi
 open QueriesApi
 open InMemory
@@ -37,8 +40,19 @@ let commandApi eventStore =
 
 let project event =
   projectReadModel inMemoryActions event
-  |> Async.RunSynchronously |> ignore  
+  |> Async.RunSynchronously |> ignore
 let projectEvents = List.iter project
+
+let socketOfObservable (ws : WebSocket) cx = socket {
+  while true do
+    let! events =
+      Control.Async.AwaitEvent(eventsStream.Publish)
+      |> Suave.Sockets.SocketOp.ofAsync
+    for event in events do
+      let eventData =
+        event |> eventJObj |> string |> Encoding.UTF8.GetBytes
+      do! ws.send Text eventData true
+}
 
 [<EntryPoint>]
 let main argv =
@@ -46,10 +60,12 @@ let main argv =
   let app =
     let eventStore = inMemoryEventStore ()
     choose [
-      commandApi eventStore
-      queriesApi inMemoryQueries eventStore
+      path "/websocket" >=>
+        handShake (socketOfObservable asyncEventStore)
+//      commandApi eventStore
+//      queriesApi inMemoryQueries eventStore
     ]
-  let cfg = 
+  let cfg =
     {defaultConfig with
       bindings = [HttpBinding.mkSimple HTTP "0.0.0.0" 8083]}
   startWebServer cfg app
