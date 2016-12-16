@@ -43,7 +43,7 @@ let project event =
   |> Async.RunSynchronously |> ignore
 let projectEvents = List.iter project
 
-let socketOfObservable (ws : WebSocket) cx = socket {
+let socketHandler (ws : WebSocket) cx = socket {
   while true do
     let! events =
       Control.Async.AwaitEvent(eventsStream.Publish)
@@ -60,10 +60,9 @@ let main argv =
   let app =
     let eventStore = inMemoryEventStore ()
     choose [
-      path "/websocket" >=>
-        handShake (socketOfObservable asyncEventStore)
-//      commandApi eventStore
-//      queriesApi inMemoryQueries eventStore
+      path "/websocket" >=> handShake socketHandler
+      commandApi eventStore
+      queriesApi inMemoryQueries eventStore
     ]
   let cfg =
     {defaultConfig with
