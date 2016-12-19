@@ -17,6 +17,13 @@ open Chessie.ErrorHandling
 open Projections
 open Events
 open JsonFormatter
+open System.IO
+open System.Reflection
+
+let clientDir =
+  let exePath = Assembly.GetEntryAssembly().Location
+  let exeDir = (new FileInfo(exePath)).Directory
+  Path.Combine(exeDir.FullName, "public")
 
 let eventsStream = new Control.Event<Event list>()
 let commandApiHandler eventStore (context : HttpContext) = async {
@@ -63,9 +70,13 @@ let main argv =
       path "/websocket" >=> handShake socketHandler
       commandApi eventStore
       queriesApi inMemoryQueries eventStore
+      GET >=> choose [
+        path "/" >=> Files.browseFileHome "index.html"
+        Files.browseHome ]
     ]
   let cfg =
     {defaultConfig with
+      homeFolder = Some(clientDir)
       bindings = [HttpBinding.mkSimple HTTP "0.0.0.0" 8083]}
   startWebServer cfg app
   0
