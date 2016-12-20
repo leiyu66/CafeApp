@@ -1,4 +1,4 @@
-module ReadModel
+module ReadModels
 open Domain
 type TableStatus =
 | Open of System.Guid

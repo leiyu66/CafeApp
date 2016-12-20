@@ -10,9 +10,9 @@ let assetBuildDir = buildDir @@ "public"
 Target "Clean" (fun _ -> CleanDirs [buildDir; testDir])
 Target "BuildApp" (fun _ ->
           !! "src/**/*.fsproj"
-            -- "src/**/*.Tests.fsproj"
-            |> MSBuildRelease buildDir "Build"
-            |> Log "AppBuild-Output: "
+          -- "src/**/*.Tests.fsproj"
+          |> MSBuildRelease buildDir "Build"
+          |> Log "AppBuild-Output: "
 )
 Target "BuildTests" (fun _ ->
           !! "src/**/*.Tests.fsproj"
@@ -31,10 +31,12 @@ Target "Client" (fun _ ->
                       WorkingDirectory = clientDir
                       NpmFilePath = npmFilePath
                    })
+     CreateDir assetBuildDir |> ignore
      CopyRecursive clientAssetDir assetBuildDir true |> ignore
 )
 "Clean"
   ==> "BuildApp"
+  ==> "Client"
   ==> "BuildTests"
   ==> "RunUnitTests"
 RunTargetOrDefault "RunUnitTests"

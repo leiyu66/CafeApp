@@ -1,7 +1,7 @@
 module Table
 open Domain
 open System.Collections.Generic
-open ReadModel
+open ReadModels
 open Projections
 open Queries
 

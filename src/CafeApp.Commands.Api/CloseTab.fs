@@ -1,6 +1,6 @@
 module CloseTab
 open Domain
-open ReadModel
+open ReadModels
 open CommandHandler
 open Commands
 open FSharp.Data

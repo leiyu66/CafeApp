@@ -4,7 +4,7 @@ open Domain
 open States
 open Events
 open CommandHandler
-open ReadModel
+open ReadModels
 open Suave
 open Suave.Successful
 open Suave.Operators
@@ -114,15 +114,13 @@ let tableJObj table =
   jobj [
     "number" .= table.Number
     "waiter" .= table.Waiter
-    "status" .= statusJObj table.Status ]
+    statusJObj table.Status ]
 
 let toReadModelsJson toJObj key models =
   models
   |> List.map toJObj |> jArray
   |> (.=) key |> List.singleton |> jobj
   |> string |> JSON OK
-
-let toTablesJSON = toReadModelsJson tableJObj "tables"
 
 let chefToDoJObj (todo : ChefToDo) =
   jobj [
@@ -154,6 +152,8 @@ let cashierToDoJObj (payment : Payment) =
 let toCashierToDosJSON =
   toReadModelsJson cashierToDoJObj "cashierToDos"
 
+let toTablesJSON =
+  toReadModelsJson tableJObj "tables"
 let toFoodsJSON =
   toReadModelsJson foodJObj "foods"
 let toDrinksJSON =

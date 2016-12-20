@@ -1,5 +1,5 @@
 module Queries
-open ReadModel
+open ReadModels
 open Domain
 open States
 open System

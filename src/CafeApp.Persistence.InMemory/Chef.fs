@@ -1,7 +1,7 @@
 module Chef
 open Domain
 open Projections
-open ReadModel
+open ReadModels
 open System.Collections.Generic
 open System
 open Table

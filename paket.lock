@@ -4,7 +4,7 @@ NUGET
       FSharp.Core  - framework: >= net10, netstandard10, netstandard11, netstandard12, netstandard13, netstandard14, netstandard15
       FSharp.Core (>= 4.0.1.7-alpha) - framework: >= netstandard16
       NETStandard.Library (>= 1.6) - framework: >= netstandard16
-    FAKE (4.39.1)
+    FAKE (4.47)
     FSharp.Core (4.0.1.7-alpha)
       Microsoft.NETCore.Platforms (>= 1.0.1) - framework: >= net463, >= netstandard16
       NETStandard.Library (>= 1.6) - framework: >= net463, >= netstandard16
