@@ -1,5 +1,7 @@
 # CafeApp/.travis.yml
 language: csharp
+env:
+  - TRAVIS_NODE_VERSION="4"
 before_script:
   - chmod a+x ./build.sh
   - npm install -g webpack
